@@ -1,13 +1,27 @@
 import React from 'react';
-import Header from './components/Header'; // Make sure the path is correct based on your project structure
-import './App.css'; // Your main App CSS file
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import ArchivesPage from './components/Archives';
+import ContactPage from './components/ContactUs';
+import './App.css';
+
+// Simple Home component as a placeholder
+const HomePage = () => {
+  return <div>Home Page</div>;
+};
 
 function App() {
   return (
-    <div className="App">
-      <Header title="Saltire Sport" />
-      {/* Other components like NewsList or Footer can be included here */}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Updated this line */}
+          <Route path="/archives" element={<ArchivesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
