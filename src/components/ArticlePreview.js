@@ -1,13 +1,20 @@
-// In ArticlePreview.js
+
 import React from 'react';
-import '../Styles/ArticlePreview.css'; // Ensure this import is correct
+import { useNavigate } from 'react-router-dom';
+import '../Styles/ArticlePreview.css';
 
 const ArticlePreview = ({ id, title, image }) => {
+  const navigate = useNavigate();
+
+  const navigateToFullArticle = () => {
+    navigate(`/article/${id}`);
+  };
+
   return (
-    <div className="article-preview">
+    <div className="article-preview" onClick={navigateToFullArticle}>
       <div className="article-content">
         <img src={image} alt={title} className="article-image" />
-        <h3 className="article-title">{title}</h3>
+        <h3 className="preview-title">{title}</h3>
       </div>
     </div>
   );

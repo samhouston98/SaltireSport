@@ -12,7 +12,7 @@
     height: auto; /* Maintains aspect ratio */
   }
   
-  .article-title {
+  .preview-title {
     word-wrap: break-word; /* Ensures long titles wrap and don't overflow */
     font-size: 14px; }
   
