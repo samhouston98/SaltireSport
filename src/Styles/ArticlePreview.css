@@ -1,0 +1,18 @@
+/* In ArticlePreview.css */
+.article-preview {
+    /* Existing styles or add any general styles for the preview */
+  }
+  
+  .article-content {
+    width: 150px; /* Set this to the desired width of your image */
+  }
+  
+  .article-image {
+    width: 100%; /* Image will take full width of the container */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  .article-title {
+    word-wrap: break-word; /* Ensures long titles wrap and don't overflow */
+    font-size: 14px; }
+  

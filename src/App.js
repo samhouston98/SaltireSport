@@ -1,14 +1,12 @@
+
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
 import ArchivesPage from './components/Archives';
 import ContactPage from './components/ContactUs';
-import './App.css';
-
-// Simple Home component as a placeholder
-const HomePage = () => {
-  return <div>Home Page</div>;
-};
+import './App.css'; // Ensure this file exists with appropriate styles
 
 function App() {
   return (
@@ -16,7 +14,7 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Updated this line */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/archives" element={<ArchivesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
